@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app">
+      <h1 className="title">React Hooks Counter App</h1>
+      <h1 className={count > 0 ? "positive" : count < 0 ? "negative" : null}>
+        {count}
+      </h1>
+      <div className="button-wrapper">
+        <button
+          className="btn"
+          onClick={() => {
+            setCount(count - 1);
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          -
+        </button>
+        <button
+          className="btn"
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          +
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
