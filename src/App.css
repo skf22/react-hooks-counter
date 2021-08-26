@@ -322,6 +322,10 @@ ul {
   animation: pulse 750ms ease-in-out;
 }
 
+.num {
+  font-size: 4.5rem;
+}
+
 @keyframes pulse {
   0%,
   100% {

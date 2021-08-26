@@ -7,7 +7,11 @@ const App = () => {
   return (
     <div className="app">
       <h1 className="title">React Hooks Counter App</h1>
-      <h1 className={count > 0 ? "positive" : count < 0 ? "negative" : null}>
+      <h1
+        className={
+          count > 0 ? "positive num" : count < 0 ? "negative num" : "num"
+        }
+      >
         {count}
       </h1>
       <div className="button-wrapper">
